@@ -24,7 +24,12 @@ ModelImporter:
   - first:
       74: 5539831331247536789
     second: Jump
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.010
+    second: {fileID: 2100000, guid: 9b138f3ed0a41ed4aa8caea3c4ef579e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

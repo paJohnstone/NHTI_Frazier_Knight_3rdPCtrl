@@ -34,6 +34,9 @@ public class ThirdPersonMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             StartCoroutine(Attack1());
+        }else if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            StartCoroutine(Block());
         }
     }
 
@@ -111,6 +114,14 @@ public class ThirdPersonMovement : MonoBehaviour
     {
         anim.SetLayerWeight(anim.GetLayerIndex("Attack Layer"), 1);
         anim.SetTrigger("Attack1");
+
+        yield return new WaitForSeconds(0.9f);
+        anim.SetLayerWeight(anim.GetLayerIndex("Attack Layer"), 0);
+    }
+    private IEnumerator Block()
+    {
+        anim.SetLayerWeight(anim.GetLayerIndex("Attack Layer"), 1);
+        anim.SetTrigger("Block");
 
         yield return new WaitForSeconds(0.9f);
         anim.SetLayerWeight(anim.GetLayerIndex("Attack Layer"), 0);
