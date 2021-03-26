@@ -79,7 +79,7 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             Idle();
         }
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
         }
