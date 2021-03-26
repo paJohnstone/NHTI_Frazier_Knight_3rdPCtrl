@@ -38,6 +38,14 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             StartCoroutine(Block());
         }
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            Death();
+        }
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            Life();
+        }
     }
 
     private void Move()
@@ -92,6 +100,16 @@ public class ThirdPersonMovement : MonoBehaviour
         anim.SetFloat("Speed", 0, 0.1f, Time.deltaTime);
     }
 
+    private void Death()
+    {
+        anim.SetTrigger("Death");
+    }
+
+    private void Life()
+    {
+        anim.SetTrigger("Life");
+    }
+
     private void Walk()
     {
         anim.SetFloat("Speed", 0.5f, 0.1f, Time.deltaTime);
@@ -112,18 +130,18 @@ public class ThirdPersonMovement : MonoBehaviour
 
     private IEnumerator Attack1()
     {
-        anim.SetLayerWeight(anim.GetLayerIndex("Attack Layer"), 1);
+        anim.SetLayerWeight(anim.GetLayerIndex("Attack Layer"), 0.5f);
         anim.SetTrigger("Attack1");
 
-        yield return new WaitForSeconds(0.9f);
+        yield return new WaitForSeconds(2.0f);
         anim.SetLayerWeight(anim.GetLayerIndex("Attack Layer"), 0);
     }
     private IEnumerator Block()
     {
-        anim.SetLayerWeight(anim.GetLayerIndex("Attack Layer"), 1);
+        anim.SetLayerWeight(anim.GetLayerIndex("Attack Layer"), 0.5f);
         anim.SetTrigger("Block");
 
-        yield return new WaitForSeconds(0.9f);
+        yield return new WaitForSeconds(2.0f);
         anim.SetLayerWeight(anim.GetLayerIndex("Attack Layer"), 0);
     }
 }

@@ -16,7 +16,7 @@ AvatarMask:
   - m_Path: 'Cloth '
     m_Weight: 0
   - m_Path: 'hands '
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Head
     m_Weight: 0
   - m_Path: Helmot Top
@@ -842,20 +842,20 @@ AvatarMask:
   - m_Path: rig/root/VIS_thigh_ik_pole.R
     m_Weight: 0
   - m_Path: rig/root/VIS_upper_arm_ik_pole.L
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: rig/root/VIS_upper_arm_ik_pole.R
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: 'Sheild '
     m_Weight: 1
   - m_Path: 'Shoulder Amor Bottom '
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: Shoulder Amor Mid
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: sword
     m_Weight: 1
   - m_Path: Toes
     m_Weight: 0
   - m_Path: Top Amor Plate
-    m_Weight: 1
+    m_Weight: 0
   - m_Path: 'Upper Body '
-    m_Weight: 1
+    m_Weight: 0
