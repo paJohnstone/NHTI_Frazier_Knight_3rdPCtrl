@@ -134,7 +134,7 @@ public class ThirdPersonMovement : MonoBehaviour
         anim.SetTrigger("Attack1");
 
         yield return new WaitForSeconds(2.0f);
-        anim.SetLayerWeight(anim.GetLayerIndex("Attack Layer"), 0);
+        anim.SetLayerWeight(anim.GetLayerIndex("Attack Layer"), 0.5f);
     }
     private IEnumerator Block()
     {
